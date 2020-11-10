@@ -1,0 +1,44 @@
+{
+  "npmScope": "react-monorepo",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "accessToken": "YWM0MGQ4NzYtMGVjNi00ZmQwLTg5MzYtNWQyMjFlZTIwMzk0fHJlYWQtd3JpdGU=",
+        "cacheableOperations": [
+          "build",
+          "test",
+          "lint",
+          "e2e"
+        ],
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
+    }
+  },
+  "projects": {
+    "demo-next": {
+      "tags": []
+    },
+    "demo-next-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "demo-next"
+      ]
+    }
+  }
+}
