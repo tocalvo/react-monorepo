@@ -19,12 +19,7 @@
       "runner": "@nrwl/nx-cloud",
       "options": {
         "accessToken": "YWM0MGQ4NzYtMGVjNi00ZmQwLTg5MzYtNWQyMjFlZTIwMzk0fHJlYWQtd3JpdGU=",
-        "cacheableOperations": [
-          "build",
-          "test",
-          "lint",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "test", "lint", "e2e"],
         "canTrackAnalytics": false,
         "showUsageWarnings": true
       }
@@ -36,9 +31,31 @@
     },
     "demo-next-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "demo-next"
-      ]
+      "implicitDependencies": ["demo-next"]
+    },
+    "demo-next-2": {
+      "tags": []
+    },
+    "demo-next-2-e2e": {
+      "tags": [],
+      "implicitDependencies": ["demo-next-2"]
+    },
+    "demo-react": {
+      "tags": []
+    },
+    "demo-react-e2e": {
+      "tags": [],
+      "implicitDependencies": ["demo-react"]
+    },
+    "ui": {
+      "tags": []
+    },
+    "demo-react-2": {
+      "tags": []
+    },
+    "demo-react-2-e2e": {
+      "tags": [],
+      "implicitDependencies": ["demo-react-2"]
     }
   }
 }
