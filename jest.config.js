@@ -5,5 +5,6 @@ module.exports = {
     '<rootDir>/apps/demo-react',
     '<rootDir>/libs/ui',
     '<rootDir>/apps/demo-react-2',
+    '<rootDir>/apps/react-native',
   ],
 };

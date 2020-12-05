@@ -56,6 +56,9 @@
     "demo-react-2-e2e": {
       "tags": [],
       "implicitDependencies": ["demo-react-2"]
+    },
+    "react-native": {
+      "tags": []
     }
   }
 }

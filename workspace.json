@@ -371,6 +371,76 @@
           }
         }
       }
+    },
+    "react-native": {
+      "root": "apps/react-native",
+      "sourceRoot": "apps/react-native/src",
+      "projectType": "application",
+      "schematics": {},
+      "architect": {
+        "start": {
+          "builder": "@nrwl/react-native:start",
+          "options": {
+            "port": 8081
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "command": "nx start react-native"
+          }
+        },
+        "run-ios": {
+          "builder": "@nrwl/react-native:run-ios",
+          "options": {}
+        },
+        "bundle-ios": {
+          "builder": "@nrwl/react-native:bundle",
+          "outputs": ["apps/react-native/build"],
+          "options": {
+            "entryFile": "apps/react-native/index.js",
+            "platform": "ios",
+            "bundleOutput": "dist/apps/react-native/ios/index.bundle"
+          }
+        },
+        "run-android": {
+          "builder": "@nrwl/react-native:run-android",
+          "options": {}
+        },
+        "build-android": {
+          "builder": "@nrwl/react-native:build-android",
+          "outputs": [
+            "apps/react-native/android/app/build/outputs/bundle",
+            "apps/react-native/android/app/build/outputs/apk"
+          ],
+          "options": {}
+        },
+        "bundle-android": {
+          "builder": "@nrwl/react-native:bundle",
+          "options": {
+            "entryFile": "apps/react-native/index.js",
+            "platform": "android",
+            "bundleOutput": "dist/apps/react-native/android/index.bundle"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/react-native/**/*.{js,ts,tsx}"]
+          }
+        },
+        "sync-deps": {
+          "builder": "@nrwl/react-native:sync-deps",
+          "options": {}
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/react-native/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {
